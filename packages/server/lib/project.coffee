@@ -217,6 +217,7 @@ class Project extends EE
 
         ## call our callback function
         ## when settings change!
+        ## TODO: pass the file path to the config:change event
         onSettingsChanged.call(@)
     }
 

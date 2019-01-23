@@ -156,7 +156,11 @@ const openProject = (project) => {
   })
 
   ipc.onConfigChanged(() => {
-    reopenProject(project)
+    // TODO decide if making this "fake" error is reasonable
+    project.setWarning({
+      isCypressErr: true,
+      type: 'CONFIGURATION_CHANGED',
+    })
   })
 
   ipc.onProjectError((__, error) => {

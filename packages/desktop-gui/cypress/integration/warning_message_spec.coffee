@@ -80,3 +80,8 @@ describe "WarningMessage", ->
       .click()
       .then ->
         expect(@ipc.externalOpen).not.to.be.called
+
+  describe "for error type CONFIGURATION_CHANGED", ->
+    it "renders configuration change message with the correct file name"
+    it "is not dismissable"
+    it "can reload the project"
